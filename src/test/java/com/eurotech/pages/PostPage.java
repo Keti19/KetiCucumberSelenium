@@ -31,7 +31,7 @@ public class PostPage extends BasePage{
         submitBtn.click();
     }
 
-    public void post2(String title, String post){
+    public void post3(String title, String post){
         titleInput.sendKeys(title);
         postInput.sendKeys(post);
         submitBtn.click();
