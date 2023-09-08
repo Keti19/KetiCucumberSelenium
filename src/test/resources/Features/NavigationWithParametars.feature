@@ -1,3 +1,4 @@
+@smoke
 Feature: Navigate Menu with parameters
   Background:
     Given The user is on the login page

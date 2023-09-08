@@ -53,5 +53,10 @@ public class DashboardPage extends BasePage{
     public String getHeader(String name){
         return   Driver.get().findElement(By.xpath("//*[text()='"+name+"']")).getText();
     }
+    @FindBy(xpath = "//*[@id='dashboard-experince-item-raw']//time/..")
+    public WebElement experienceDate;
+
+    @FindBy(xpath = "//*[text()= 'Experience Added']")
+    public WebElement experienceAddedMessage;
 
 }

@@ -26,16 +26,5 @@ public class Hooks {
 
     }
 
-    @Before("@db")
-    public void setupDB(){
-        System.out.println("This is coming from before DB");
-        System.out.println("Connecting Database");
-    }
-
-    @After("@db")
-    public void tearDownDB(){
-        System.out.println("This is coming from after DB");
-        System.out.println("Disconnecting Database");
-    }
 
 }

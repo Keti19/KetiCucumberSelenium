@@ -1,8 +1,7 @@
 package com.eurotech.utilities;
 
 import org.apache.poi.ss.usermodel.*;
-import org.testng.Assert;
-
+import org.junit.Assert;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -16,6 +15,7 @@ import java.util.Map;
  * it works with xls and xlsx files.
  */
 public class ExcelUtil {
+
     private Sheet workSheet;
     private Workbook workBook;
     private String path;
@@ -29,7 +29,7 @@ public class ExcelUtil {
             workBook = WorkbookFactory.create(ExcelFile);
             workSheet = workBook.getSheet(sheetName);
             // check if sheet is null or not. null means  sheetname was wrong
-            Assert.assertNotNull(workSheet, "Sheet: \""+sheetName+"\" does not exist\n");
+            Assert.assertNotNull("Sheet: \""+sheetName+"\" does not exist\n",workSheet);
 
         } catch (Exception e) {
             throw new RuntimeException(e);

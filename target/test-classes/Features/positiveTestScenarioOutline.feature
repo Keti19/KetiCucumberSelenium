@@ -1,5 +1,5 @@
 Feature: Login as different users using Scenario Outline
-
+@ddf
   Scenario Outline: Login as student with parameters
     Given The user is on the login page
     When The user logs in using "<username>" and "<password>" credentials
